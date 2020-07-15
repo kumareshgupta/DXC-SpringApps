@@ -13,11 +13,11 @@ public class ToDoService {
 	private static List<ToDo> todos = new ArrayList<>();
 	static {
 		ToDo toDo1 = new ToDo(11,"Ram", "Learning Spring Boot", LocalDate.now(), false);
-		ToDo toDo2 = new ToDo(11,"Ram", "Learning Agile Methodology", LocalDate.now(), false);
-		ToDo toDo3 = new ToDo(12,"Shyam", "Learning Spring Boot", LocalDate.now(), false);
-		ToDo toDo4 = new ToDo(13,"Mohani", "Writing Spring Boot book", LocalDate.now(), false);
-		ToDo toDo5 = new ToDo(14,"Uma", "Learning Spring MVC", LocalDate.now(), false);
-		ToDo toDo6 = new ToDo(14,"Uma", "Learning Spring REST", LocalDate.now(), false);
+		ToDo toDo2 = new ToDo(12,"Ram", "Learning Agile Methodology", LocalDate.now(), false);
+		ToDo toDo3 = new ToDo(13,"Shyam", "Learning Spring Boot", LocalDate.now(), false);
+		ToDo toDo4 = new ToDo(14,"Mohani", "Writing Spring Boot book", LocalDate.now(), false);
+		ToDo toDo5 = new ToDo(15,"Uma", "Learning Spring MVC", LocalDate.now(), false);
+		ToDo toDo6 = new ToDo(16,"Uma", "Learning Spring REST", LocalDate.now(), false);
 		
 		todos.add(toDo1);
 		todos.add(toDo2);
@@ -42,10 +42,15 @@ public class ToDoService {
 		
 	}*/
 	
-	/*
+
 	public ToDo retrieve(int id) {
-		
-	}*/
+		for(ToDo todo : todos) {
+			if(todo.getId()== id) {
+				return todo;
+			}
+		}
+		return null;
+	}
 	
 	
 	
